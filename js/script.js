@@ -26,14 +26,17 @@ let shuffleOrder = () => {
 
 // Acende a próxima cor
 const lightColor = (element, number) => {
-  number = number * 500;
+  number = number * 1000;
+  console.log('Valor de number ', number);
   setTimeout(() => {
+    console.log('Selecionando elemento ', element);
     element.classList.add('selected');
-  }, number - 250);
+  }, number);
 
   setTimeout(() => {
+    console.log('Removendo elemento ', element);
     element.classList.remove('selected');
-  });
+  }, number + 500);
 };
 
 // Checa se os botões clicados são os mesmos da ordem gerada no jogo
@@ -91,7 +94,7 @@ const gameOver = () => {
 
 const playGame = () => {
   alert('Bem vindo ao Gênesis! Iniciando novo jogo');
-  score = 0;
+  score = -1;
 
   nextLevel();
 };
