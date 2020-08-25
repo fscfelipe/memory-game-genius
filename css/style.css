@@ -1,0 +1,28 @@
+body{
+  margin: 0;
+  background: rgb(248, 200, 248)
+}
+
+.main-game{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* O Game */
+
+.genius{
+  display: grid;
+  grid-template-areas: 'green  red' 
+                       'yellow blue';
+  gap: 10px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 100%;
+  width: 700px;
+  height: 700px;
+  margin-top: 5%;
+
+}
